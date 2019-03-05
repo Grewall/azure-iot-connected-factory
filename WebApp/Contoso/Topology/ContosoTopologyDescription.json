@@ -2123,7 +2123,7 @@
       ]
     },
     {
-      "Guid": "2727fc7a-89dc-4367-9ebe-8fb22294b2ab",
+      "Guid": "F6AAFEB8-6B74-4D7B-A8D0-3E9A7414A0E4",
       "Name": "Tyson Union City",
       "Description": "Chicken Packaging",
       "Location": {
@@ -2135,7 +2135,7 @@
       "Image": "factory.png",
       "ProductionLines": [
         {
-          "Guid": "d2ebeafa-95a5-4473-8efc-9a7d1fae0135",
+          "Guid": "C963F4EA-B2EE-42CF-8E44-CA83E9A58E2F",
           "Name": "Production Line 1",
           "Description": "Chicken Thighs",
           "Image": "factory_floor.gif",
