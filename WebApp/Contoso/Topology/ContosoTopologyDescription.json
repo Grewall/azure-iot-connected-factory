@@ -2121,6 +2121,99 @@
           ]
         }
       ]
+    },
+    {
+      "Guid": "2727fc7a-89dc-4367-9ebe-8fb22294b2ab",
+      "Name": "Tyson Union City",
+      "Description": "Chicken Packaging",
+      "Location": {
+        "City": "Union City",
+        "Country": "USA",
+        "Latitude": 36.4242,
+        "Longitude": 89.0570
+      },
+      "Image": "factory.png",
+      "ProductionLines": [
+        {
+          "Guid": "d2ebeafa-95a5-4473-8efc-9a7d1fae0135",
+          "Name": "Production Line 1",
+          "Description": "Chicken Thighs",
+          "Image": "factory_floor.gif",
+          "ImagePushpin": {
+            "Top": 290,
+            "Left": 425
+          },
+          "Stations": [
+            {
+              "Name": "Robot 1",
+              "Description": "JMP Robot 1",
+              "Image": "assembly_station.png",
+              "ImagePushpin": {
+                "Top": 370,
+                "Left": 133
+              },
+              "OpcUri": "urn:TORL015.jmpeng.com:Kepware.KEPServerEX.V6:UA%20Server",
+              "Simulation": {
+                "Type": "Robot 1",
+                "Id": "Rob101",
+                
+                "Args": "200 10 yes"
+              },
+              "Kpi1": {
+                "Minimum": 90,
+                "Target": 180,
+                "Maximum": 360
+              },
+              "Kpi2": {
+                "Minimum": 50,
+                "Target": 100,
+                "Maximum": 200
+              },
+              "OpcNodes": [
+                {
+                  "NodeId": "ns=2;s=Line 2.Robot.Reject",
+                  "SymbolicName": "Rejects",
+                  "Relevance": [ "Kpi1", "OeeQuality_Good" ],
+                  "Maximum": 200,
+                  "Minimum":50
+                  
+                },
+                {
+                  "NodeId": "ns=2;s=Line 2.Robot2.TotalSlots",
+                  "SymbolicName": "Total Slots",
+                  "Relevance": [ "OeeQuality_Bad" ],
+                  "Maximum": 200,
+                  "Minimum":50
+                  
+                },
+                {
+                  "NodeId": "ns=2;s=Line 2.Robot.Mispicks",
+                  "SymbolicName": "Mispicks",
+                  "Relevance": [ "OeeAvailability_Fault" ],
+                  "Units": "Units",
+                  "Maximum": 200,
+                  "Minimum":50
+                },
+                {
+                  "SymbolicName": "RunningTime",
+                  "Relevance": [ "OeeAvailability_Running" ],
+                  "OpCode": "Timespan",
+                  "Visible": false,
+                  "Units": "ms"
+                },
+                {
+                  "ConstValue": 10000,
+                  "SymbolicName": "IdealCycleTime",
+                  "OpCode": "Const",
+                  "Visible": false,
+                  "Units": "ms",
+                  "Relevance": [ "OeePerformance_Ideal" ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
