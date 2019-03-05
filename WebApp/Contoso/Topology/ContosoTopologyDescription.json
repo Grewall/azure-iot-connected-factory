@@ -2153,12 +2153,6 @@
                 "Left": 133
               },
               "OpcUri": "urn:TORL015.jmpeng.com:Kepware.KEPServerEX.V6:UA%20Server",
-              "Simulation": {
-                "Type": "Robot 1",
-                "Id": "Rob101",
-                
-                "Args": "200 10 yes"
-              },
               "Kpi1": {
                 "Minimum": 90,
                 "Target": 180,
